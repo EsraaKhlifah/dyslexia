@@ -1,5 +1,6 @@
 import 'package:dyslexia_app/feature/auth/presentation/cubit/forget_password_cubit/forget_password_cubit.dart';
 import 'package:dyslexia_app/feature/auth/presentation/cubit/sign_up_cubit/sign_up_cubit.dart';
+import 'package:dyslexia_app/feature/question/presentation/cubits/question_cubit.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
@@ -30,6 +31,10 @@ void main() async {
 
         BlocProvider(
           create: (context) => sl<ForgetPasswordCubit>(),
+        ),
+
+        BlocProvider(
+          create: (context) => sl<QuestionCubit>()..getAllQuestion(),
         ),
         // BlocProvider(
         //   create: (context) => sl<ForgetPasswordCubit>(),

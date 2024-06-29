@@ -5,6 +5,8 @@ import 'package:dyslexia_app/core/database/api/dio_consumer.dart';
 import 'package:dyslexia_app/feature/auth/data/repository/auth_repository.dart';
 import 'package:dyslexia_app/feature/auth/presentation/cubit/forget_password_cubit/forget_password_cubit.dart';
 import 'package:dyslexia_app/feature/auth/presentation/cubit/sign_up_cubit/sign_up_cubit.dart';
+import 'package:dyslexia_app/feature/question/data/repository/question_repository.dart';
+import 'package:dyslexia_app/feature/question/presentation/cubits/question_cubit.dart';
 import 'package:get_it/get_it.dart';
 
 import '../../feature/auth/presentation/cubit/login_cubit/login_cubit.dart';
@@ -19,6 +21,7 @@ void initServiceLocator(){
   sl.registerLazySingleton(()=>GlobalCubit());
   sl.registerLazySingleton(()=>LoginCubit(sl()));
   sl.registerLazySingleton(()=>SignUpCubit(sl()));
+  sl.registerLazySingleton(()=>QuestionCubit(sl()));
   sl.registerLazySingleton(()=>ForgetPasswordCubit());
   //external
   sl.registerLazySingleton(()=>CacheHelper());
@@ -26,6 +29,7 @@ void initServiceLocator(){
 
   sl.registerLazySingleton<ApiConsumer>(()=>DioConsumer(sl()));
   sl.registerLazySingleton(() => AuthRepository());
+  sl.registerLazySingleton(() => QuestionRepository());
 
 
 

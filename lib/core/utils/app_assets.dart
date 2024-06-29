@@ -8,4 +8,5 @@ class AppAssets{
   static const String forgetPasswordImage = '${baseUrl}forget_password_image.png';
   static const String verifyCodeImage = '${baseUrl}verify_code_image.png';
   static const String newPasswordImage = '${baseUrl}new_passord_image.png';
+  static const String qusImage = '${baseUrl}qus_image.png';
 }

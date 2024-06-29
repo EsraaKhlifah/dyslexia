@@ -32,10 +32,10 @@ class LoginScreen extends StatelessWidget {
                         message: 'Login Successfully',
                         state: ToastState.success,
                       );
-                      // navigateReplacement(
-                      //   context: context,
-                      //   route: Routes.home,
-                      // );
+                      navigateReplacement(
+                        context: context,
+                        route: Routes.home,
+                      );
                     }
                     if (state is LoginErrorState) {
                       showToast(
@@ -160,6 +160,7 @@ class LoginScreen extends StatelessWidget {
                                  // Login Function
 
                                   cubit.login();
+
                                 }
                               },
                               text: 'Login',

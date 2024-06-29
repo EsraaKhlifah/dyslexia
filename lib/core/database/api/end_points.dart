@@ -3,7 +3,7 @@ class EndPoint {
   static const String signIn = 'users/login';
   static const String signUp = 'users/signup';
 
-  static const String chefChangePassword = 'chef/change-password';
+  static const String question = '/question';
   static const String chefDelete = 'chef/delete';
   static const String chefGet = 'chef/get-chef/';
   static const String sendCode = 'chef/send-code';
